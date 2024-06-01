@@ -1,0 +1,57 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30vh;
+    margin: 0;
+}
+.profile-container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+h1 {
+    color: #333;
+}
+.welcome-message {
+    font-size: 1.2em;
+    color: #666;
+}
+
+.cards{
+	width: 80%;
+	margin: auto;
+	text-align: center;
+	padding-top: 5vh;
+}
+
+.flower-img{
+	width: 84%;
+    height: 4vh;
+}
+
+
+.submit{
+	width: 10%;
+	background-color: #11388185;
+	color: white;
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+  }
+
+.submit:hover {
+	background-color: black;
+  }
+
+.table_div{
+    color: #5c4da4;
+    padding-top: 10vh;
+    padding-left: 10vh;
+}

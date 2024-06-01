@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+    <head>
+	   <meta name="viewport" content="with=device-width, initial-scale=1.0">
+	   <title>school map</title>
+	   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
+
+  
+<!--   <script src="index.js"></script>-->
+<script>
+	function redirectToLogin() {
+		window.location.href = "{{ url_for('login') }}";
+	}
+</script>
+   </head>
+
+   <body class="body" id="body">
+	   <section class="header">
+		        <nav>
+		  	        <a href="index.html"><img src=""></a>
+			        <div class="nav-links" id="navLinks">
+			            <i class="fa fa-times" onclick="hideMenu()"></i>
+			            <span class="material-icons" onclick="hideMenu()">>></span>
+
+				        <ul>
+					        <li><a href="#">HOME</a></li>
+					        <li><a href="#" onclick="redirectToLogin()">Login</a></li>
+					        <li><a href="#">Sign Up</a></li>
+					        <li><a href="#link_about">ABOUT</a></li>
+				        </ul>
+
+			        </div>
+		            <i class="fa fa-bars" onclick="showMenu()"></i>
+		            <span class="material-icons" id="material-icons" onclick="showMenu()">Menu</span>
+		        </nav>
+
+            <div class="text-box">
+    	        <h1 id="h1">WELCOME TO SCHOOL<sub>MAP</sub></h1>
+    	        <p id="h2">
+    		        make your choices from milions of  eligible schools<br/> we present schools from every country<br/> 
+    		        we are thrilled to have you</b>
+    	        </p>
+    	        <a class="hero-btn" id="btn1" href="#quick_find">QUICK FIND</a>
+				<a class="hero-btn" id="btn1" onclick="redirectToLogin()">QUICK Login</a>
+            </div>
+		
+	   </section>
+
+	   <div id="quick_find"></div>
+
+	   <section class="cards">
+
+
+	   	<div class="row">
+	   		<div class="cards-col" id="flower-cards">
+	   			<h3>Ex School info</h3>
+	   			<section class="flower-img">
+					<div class="form_div">
+						<form >
+						  <label for="fname">Country</label>
+						  <input type="text" id="fname" name="firstname" placeholder="The country of your ex school.."class="select">
+					  
+						  <label for="lname">School's Name</label>
+						  <input type="text" id="lname" name="lastname" placeholder="The school's name.." class="select">
+
+						  <label for="lname">Your GPA</label>
+						  <input type="number" id="lname" name="lastname" placeholder="Your GPA score.." class="select">
+					  
+						
+						</form>
+					  </div>
+				</section>
+	   		</div>
+
+			   <div class="cards-col" id="flower-cards">
+				<h3>School Of Interest INFO</h3>
+				<section class="flower-img">
+				 <div class="form_div">
+					 <form>
+					   <label for="fname">Program Of Choice</label>
+					   <input type="text" id="fname" name="firstname" placeholder="Program of Interest.."class="select">
+				   
+					   <label for="country">Country Of Interest</label>
+					   <select id="country" name="country" class="select">
+						<option value="All">All</option>
+						 <option value="australia">Australia</option>
+						 <option value="canada">Canada</option>
+						 <option value="usa">USA</option>
+					   </select>
+					 
+					   <input type="submit" value="Submit" class="submit">
+					 </form>
+				   </div>
+			 </section>
+			</div>
+
+            <div class="cards-col" id="flower-cards">
+	   			<h3>Results</h3>
+	   			<p>
+	   				<p class="flower-img">Sorry, database for free search is down, register to get acces</p>
+	   			</p>
+	   		</div>
+
+	   	</div>
+
+
+		<div id="link_about"></div>
+	   	<div class="row">
+	   		<div class="about-cards-col">
+	   			<h3>About Us</h3>
+	   			<p>
+					Welcome to SchoolMatch, your personalized guide to finding the perfect school for your academic
+					journey. We understand that choosing the right school is a crucial decision that shapes your future,
+					and we are here to make that process easier and more informed.
+	   			</p>
+				<h3>Our Mission</h3>
+				<p>
+					At SchoolMatch, our mission is to empower students by providing tailored school recommendations 
+					based on their unique academic profiles and achievements. We believe that every student deserves 
+					the best educational opportunities that align with their strengths and aspirations.
+				</p>
+				<h3>How It Works</h3>
+				<P>
+					Our platform uses advanced algorithms to analyze your academic data, including GPA scores, 
+					standardized test results, and other relevant achievements. By evaluating this information,
+					 we generate a customized list of schools that best match your academic profile and goals.
+					  This personalized approach ensures that you are considering schools where you are most likely 
+					  to thrive and succeed.
+				</P>
+				<h3>Our Story</h3>
+				<p>
+					SchoolMatch was founded by a team of educators, data scientists, and tech enthusiasts who 
+					recognized the challenges students face when choosing the right school. Our collective experience in 
+					education and technology drives our commitment to helping students navigate this critical decision 
+					with confidence and ease.
+				</p>
+	   		</div>
+
+
+	   	</div>
+	   	
+	   </section>
+
+
+	   <footer class="footer">
+		<div class="inner-footer">
+			<div class="quick-links">
+				<ul>
+					<li class="quick-items"><a href="">Services</a></li>
+					<li class="quick-items"><a href="">About Us</a></li>
+					<li class="quick-items"><a href="">Contact Us</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="outer-footer">
+			copyright &copy; school map. All Right Reserved
+		</div>
+	</footer>
+
+</body>
+</html>
+
+
+
+
+
+
+
+

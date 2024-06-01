@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/profile.css') }}">
+</head>
+<body>
+    <div class="profile-container">
+        <h1>Welcome to your profile, {{ username }}!</h1>
+        <p class="welcome-message">We are glad to have you here.</p>
+    </div>
+
+    <section class="cards">
+      <div class="row">
+        <div class="cards-col" id="flower-cards">
+          <h3>Ex School info</h3>
+          <section class="flower-img">
+            <div class="form_div">
+              <form method="POST" action="{{ url_for('profile') }}">
+                <label for="excountry">Country</label>
+                <input type="text" id="excountry" name="excountry" placeholder="The country of your ex school..">
+              
+                <label for="exschoolname">School's Name</label>
+                <input type="text" id="exschoolname" name="exschoolname" placeholder="The school's name..">
+
+                <label for="gpa">Your GPA</label>
+                <input type="number" id="gpa" name="gpa" placeholder="Your GPA score..">
+            </div>
+          </section>
+        </div>
+
+        <div class="cards-col" id="flower-cards">
+          <h3>School Of Interest INFO</h3>
+          <section class="flower-img">
+            <div class="form_div">
+                <label for="fprogram">Program Of Choice</label>
+                <input type="text" id="fprogram" name="fprogram" placeholder="Program of Interest..">
+              
+                <label for="fcountry">Country Of Interest</label>
+                <select id="fcountry" name="fcountry">
+                  <option value="All">All</option>
+                  <option value="australia">Australia</option>
+                  <option value="canada">Canada</option>
+                  <option value="usa">USA</option>
+                </select>
+                <br/>
+                <input type="submit" value="Submit" class="submit">
+              </form>
+            </div>
+          </section>
+        </div>
+      </div>
+
+      {% if show_table %}
+      <div class="table_div">
+        <table class="table">
+            <tr>
+                {% for header in headings %}
+                <th>{{ header }}</th>
+                {% endfor %}
+            </tr>
+            {% for row in schooldata %}
+            <tr>
+                {% for cell in row %}
+                <td>{{ cell }}</td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </table>
+      </div>
+      {% endif %}
+    </section>
+</body>
+</html>
