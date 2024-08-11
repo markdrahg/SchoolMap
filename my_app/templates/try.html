@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Dashboard</title>
+    {% load static %}
+</head>
+<body>
+    <!-- CSRF Token for Django -->
+    <input type="hidden" name="csrfmiddlewaretoken" value="{{ csrf_token }}">
+
+    <!-- Controls for filtering schools -->
+    <select id="interestCountry">
+        <option value="All">All Countries</option>
+        <option value="1">USA</option>
+        <option value="2">Canada</option>
+        <option value="3">Germany</option>
+    </select>
+
+    <select id="acceptanceRate">
+        <option value="All">All Acceptance Rates</option>
+        <option value="1">Low</option>
+        <option value="2">Medium</option>
+        <option value="3">High</option>
+    </select>
+
+    <button id="load-schools-button">Load Schools</button>
+
+    <!-- Table for displaying suggested schools -->
+    <table id="schools">
+        <tr>
+            <th>Save</th>
+            <th>Name</th>
+            <th>Acceptance Rate</th>
+            <th>Country</th>
+            <th>Website</th>
+        </tr>
+    </table>
+
+    <!-- Table for displaying saved schools -->
+    <table id="stored_schools">
+        <tr>
+            <th>Save</th>
+            <th>Name</th>
+            <th>Acceptance Rate</th>
+            <th>Country</th>
+            <th>Website</th>
+        </tr>
+    </table>
+
+    <table id="schools">
+        <tbody>
+            {% for school in schools %}
+                <tr>
+                    <td><input type="checkbox" class="save-checkbox" data-school-id="{{ school.id }}"></td>
+                    <td>{{ school.name }}</td>
+                    <td>{{ school.id }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    
+    <script src="{% static 'user_MySQL_API.js' %}"></script>
+</body>
+</html>
