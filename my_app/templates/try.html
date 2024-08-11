@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School List</title>
+</head>
+<body>
+    <button id="load-schools-button">Load Schools</button>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Acceptance Rate</th>
+                <th>Country</th>
+                <th>Website</th>
+            </tr>
+        </thead>
+        <tbody id="schools-table-body">
+            <!-- Data will be appended here -->
+        </tbody>
+    </table>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('load-schools-button').addEventListener('click', function() {
+                console.log("FETCH 1");
+                fetch('/api/schools/')
+                    .then(response => response.json())
+                    .then(data => {
+                        let table = document.getElementById('schools-table-body');
+                        if (table) {
+                            table.innerHTML = '';
+                            data.forEach(school => {
+                                let row = document.createElement('tr');
+                                row.innerHTML = `
+                                    <td>${school.name}</td>
+                                    <td>${school.acceptance_rate}</td>
+                                    <td>${school.country}</td>
+                                    <td><a href="${school.website}" target="_blank">${school.website}</a></td>
+                                `;
+                                table.appendChild(row);
+                            });
+                        } else {
+                            console.error('Element with ID "schools-table-body" not found.');
+                        }
+                    })
+                    .catch(error => console.error('Error fetching data:', error));
+            });
+        });
+    </script>
+</body>
+</html>

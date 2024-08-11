@@ -1,0 +1,13 @@
+.accordion-body {
+    overflow: auto; /* Adds a scrollbar if content overflows */
+    word-wrap: break-word; /* Ensures long words break and don't overflow */
+    max-height: 30vh; /* Set a desired max height */
+    overflow-y: auto; /* Enable vertical scroll */
+  }
+  
+
+  @media (max-width: 576px) {
+    .accordion-body {
+      max-height: 50vh; /* Increase height for small screens if needed */
+    }
+  }

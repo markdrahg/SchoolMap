@@ -1,0 +1,47 @@
+[
+    {
+        "model": "myapp.book",
+        "pk": 1,
+        "school": {
+            "name": "USA school",
+            "country": "USA",
+            "acceptance": "Low"
+        }
+    },
+    {
+        "model": "myapp.book",
+        "pk": 1,
+        "school": {
+            "name": "Oxford",
+            "country": "USA",
+            "acceptance": "Low"
+        }
+    },
+    {
+        "model": "myapp.book",
+        "pk": 2,
+        "school": {
+            "name": "Canadian School",
+            "country": "Canada",
+            "acceptance": "Medium"
+        }
+    },
+    {
+        "model": "myapp.book",
+        "pk": 3,
+        "school": {
+            "name": "German school",
+            "country": "Germany",
+            "acceptance": "Medium"
+        }
+    },
+    {
+        "model": "myapp.book",
+        "pk": 3,
+        "school": {
+            "name": "German Technical School",
+            "country": "Germany",
+            "acceptance": "Medium"
+        }
+    }
+]

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schools</title>
+</head>
+<body>
+    <h1>List of Schools</h1>
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <th>Acceptance Rate</th>
+            <th>Country</th>
+            <th>Website</th>
+        </tr>
+        {% for school in schools %}
+        <tr>
+            <td>{{ school.name }}</td>
+            <td>{{ school.acceptance_rate }}</td>
+            <td>{{ school.country }}</td>
+            <td><a href="{{ school.website }}" target="_blank">{{ school.website }}</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

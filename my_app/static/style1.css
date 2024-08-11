@@ -1,0 +1,154 @@
+.header{
+	min-height: 100vh;
+	width: 100%;
+	background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4 9 30 / 52%)),url(bg.jpg);
+	background-position: center;
+	background-size: cover;
+	position: relative;
+}
+
+.custom-color-1{
+	color: #fff;
+	font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+}
+
+.custom-color-2{
+	color:#fff;
+}
+
+.cards-col{
+	flex-basis: 31%;
+	background: #f2f2f2;
+	border-radius: 10px;
+	margin-bottom: 5%;
+	padding:20px 12px;
+	box-sizing: border-box;
+	transition: 0.5s;
+}
+
+h3{
+	font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+}
+
+
+
+.row{
+	margin-top: 5%;
+	display: flex;
+	justify-content: space-evenly;
+
+}
+
+.about-cards-col{
+	background: #6381ce1a;
+	border-radius: 10px;
+	margin-bottom: 5%;
+	padding:20px 12px;
+	box-sizing: border-box;
+	transition: 0.5s;
+}
+
+
+.fb{
+	color: #41464b;
+	background-color: #27272717;
+}
+
+.fb2{
+	color: #41464b;
+	background-color: #27272717;
+}
+
+.flinks{
+	text-decoration: none;
+	text-decoration-line: none;
+}
+
+.p-2.bd-highlight:hover{
+	color: rgb(21, 18, 207);
+}
+
+
+
+.alert_bodies {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+
+#alert_body {
+    display: none;
+}
+
+#login_display{
+    display: none;
+}
+
+#signUp_display{
+    display: none;
+}
+
+#alertButton {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.alertPopup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(15 14 14 / 76%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.3s ease;
+}
+
+
+.popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 300px;
+    position: relative;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#okButton {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.form_base_0{
+    color: rgb(81, 139, 219);
+}
+
+.form_base_0:hover{
+    color: red;
+}
