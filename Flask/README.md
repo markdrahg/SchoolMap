@@ -1,4 +1,0 @@
-#  REQUIREMENTS
-
-## Python
-## Flask
